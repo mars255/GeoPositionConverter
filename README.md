@@ -5,6 +5,6 @@ https://en.wikipedia.org/wiki/Geographic_coordinate_conversion
 
 To run the test:
 
-cmake -S . -B build
-cmake --build build/
-./build/test
+cmake -S . -B build  
+cmake --build build/  
+./build/test  
