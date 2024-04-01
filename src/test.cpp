@@ -1,6 +1,5 @@
 #include "conversion.hpp"
 #include "coordinates.hpp"
-#include <cmath>
 #include <iostream>
 int main() {
   auto original = GeodeticPoint(23, 40, 22);
