@@ -13,7 +13,7 @@ struct GeodeticPoint {
   float longitude;
   float latitude;
   float height;
-  GeodeticPoint(float lon_val, float lat_val, float height_val);
+  GeodeticPoint(float lat_val, float long_val, float height_val);
   friend std::ostream &operator<<(std::ostream &os, const GeodeticPoint &point);
 };
 
