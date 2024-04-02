@@ -8,7 +8,7 @@ float prime_vertical(float angle) {
   return A / sqrt(1 - E2 * pow(std::sin(angle), 2));
 }
 
-ECEFPoint convert_geodetic_to_ecef(const GeodeticPoint coords) {
+ECEFPoint convert_geodetic_to_ecef(const GeodeticPoint &coords) {
   const float cos_lat = std::cos(deg2rad(coords.latitude));
   const float sin_lat = std::sin(deg2rad(coords.latitude));
   const float cos_long = std::cos(deg2rad(coords.longitude));
@@ -23,7 +23,7 @@ ECEFPoint convert_geodetic_to_ecef(const GeodeticPoint coords) {
   return ECEFPoint(x, y, z);
 }
 
-GeodeticPoint convert_ecef_to_geodetic(const ECEFPoint coords,
+GeodeticPoint convert_ecef_to_geodetic(const ECEFPoint &coords,
                                        int iterations = 4) {
   // Find longitude
   float longitude = std::atan2(coords.y, coords.x);
